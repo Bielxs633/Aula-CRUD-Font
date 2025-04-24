@@ -6,7 +6,14 @@ export async function getContatos(){
     const data = await response.json()
     // console.log(data)
     return data
+}
 
+export async function getContatosNome(nome){
+    const url = `https://bakcend-fecaf-render.onrender.com/contatos?nome_like=^${nome}`
+    const response = await fetch(url)
+    const data = await response.json()
+    // console.log(data)
+    return data
 }
 
 async function getContato(id){
