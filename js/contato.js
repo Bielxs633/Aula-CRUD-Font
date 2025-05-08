@@ -1,5 +1,19 @@
 'use strict'
 
+export async function postContato(contato) {
+    const url = 'https://bakcend-fecaf-render.onrender.com/contatos'
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contato)
+    }
+    const response = await fetch (url, options)
+
+    return response.ok
+}
+
 export async function getContatos(){
     const url = 'https://bakcend-fecaf-render.onrender.com/contatos'
     const response = await fetch(url)
@@ -16,7 +30,7 @@ export async function getContatosNome(nome){
     return data
 }
 
-async function getContato(id){
+export async function getContato(id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
     const response = await fetch(url)
     const data = await response.json()
@@ -25,7 +39,7 @@ async function getContato(id){
 
 }
 
-async function putContato(id, contato){
+export async function putContato(id, contato){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
     const options = {
         method: 'PUT',
@@ -38,7 +52,7 @@ async function putContato(id, contato){
     return response.ok
 }
 
-async function deleteContato(id){
+export async function deleteContato(id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
     const options = {
         method: 'DELETE'
