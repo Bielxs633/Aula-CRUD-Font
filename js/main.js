@@ -1,6 +1,6 @@
 'use strict'
 
-import { getContatos } from "./contato.js"
+import { getContatos, getContatosNome } from "./contato.js"
 
 function criarCard (contato){
     // console.log(contato)
@@ -21,5 +21,33 @@ async function exibirContatos(){
     contatos.forEach( criarCard )
 }
 
+async function exibirPesquisa(evento){
+    if (evento.key == 'Enter'){
+        // console.log(evento)
+        // console.log(evento.target.value)
+        // console.log('Olá Mundo')
+        const contatos = await getContatosNome(evento.target.value)
+        document,getElementById('container').replaceChildren()
+        contatos.forEach(criarCard)
+    }
+}
+
+function cadastrarContato (){
+    document.querySelector('main').className = 'form-show'
+}
+
+function voltarHome (){
+    document.querySelector('main').className = 'card-show'
+}
+
 exibirContatos()
 // getContatos()
+
+document.getElementById('pesquisa')
+        .addEventListener('keydown', exibirPesquisa)
+
+document.getElementById('novo-contato')
+        .addEventListener('click', cadastrarContato)
+
+document.getElementById('cancelar')
+        .addEventListener('click', voltarHome)

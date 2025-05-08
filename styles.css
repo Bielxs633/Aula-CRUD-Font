@@ -34,7 +34,8 @@ header input {
     border-radius: 4px;
     padding: 0 12px;
 }
-header button{
+.button{
+    min-width: 100px;
     height: 48px;
     background-color: red;
     color: white;
@@ -49,9 +50,13 @@ main{
 }
 
 .container{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 32px;
+}
+
+main.card-show .container {
+    display: flex;
 }
 
 .card-contato {
@@ -71,3 +76,72 @@ main{
     border-radius: 50%;
     border: 4px solid red;
 }
+
+form {
+    /* background-color: red; */
+    width: 80%;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+}
+
+main.form-show form {
+    display: flex;
+}
+
+.preview {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid red;
+}
+
+.preview-input {
+    display: none;
+}
+
+.preview-label {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background-color: darkred; */
+}
+
+.preview-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.input-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text {
+    height: 32px;
+    border: 2px solid red;
+    border-radius: 2px;
+    outline: none;
+    padding-left: 16px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+

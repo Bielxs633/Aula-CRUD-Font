@@ -11,16 +11,54 @@
     
     <header>
         <img src="./img/Logo_SENAI.png" alt="Logo SENAI">
-        <input type="text" placeholder="Digite o nome do Contato">
-        <button>Novo contato</button>
+        <input type="text" placeholder="Digite o nome do Contato" id="pesquisa">
+        <button class="button" id="novo-contato">Novo contato</button>
     </header>
 
-    <main>
+    <main class="card-show">
         <div class="container" id="container">
         </div>
+
+        <form>
+            <div class="preview">
+                <input class="preview-input" id="foto" type="file" accept="image/*">
+                <label class="preview-label" for="foto"></label>
+                <img src="./img/mais.png"  class="preview-image" id="preview-image">
+            </div>
+            <div class="input-container">
+                <div class="input">
+                    <label>Nome</label>
+                    <input type="text" class="input-text" id="nome" required>
+                </div>
+                <div class="input">
+                    <label>E-mail</label>
+                    <input type="email" class="input-text" id="email" required>
+                </div>
+                <div class="input">
+                    <label>Celular</label>
+                    <input type="text" class="input-text" id="celular" required>
+                </div>
+                <div class="input">
+                    <label>Endereço</label>
+                    <input type="text" class="input-text" id="endereco" required>
+                </div>
+                <div class="input">
+                    <label>Cidade</label>
+                    <input type="text" class="input-text" id="cidade" required>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="button" id="editar">Editar</button>
+                <button type="button" class="button" id="deletar">Deletar</button>
+                <button type="button" class="button" id="salvar">Salvar</button>
+                <button type="button" class="button" id="cancelar">Cancelar</button>
+            </div>
+        </form>
     </main>
 
     <footer></footer>
 
 </body>
 </html>
+
+<!-- from - Gabriel S. Soares -->
