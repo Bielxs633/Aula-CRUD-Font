@@ -78,7 +78,6 @@ main.card-show .container {
 }
 
 form {
-    /* background-color: red; */
     width: 80%;
     margin: auto;
     display: none;
@@ -110,7 +109,6 @@ main.form-show form {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    /* background-color: darkred; */
 }
 
 .preview-image {
@@ -144,4 +142,3 @@ main.form-show form {
     display: flex;
     justify-content: space-evenly;
 }
-
